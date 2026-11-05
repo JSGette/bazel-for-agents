@@ -1,6 +1,7 @@
 ---
 title: "One task or decision"
 status: proposed
+bazel_baseline: "9.3.1"
 bazel_verified: []
 rulesets_verified: {}
 platforms_verified: []
@@ -28,6 +29,8 @@ record or exact primary source. Distinguish recommendations from API requirement
 
 Link to the runnable fixture and its verified source. Do not add an untested
 copyable example to published guidance.
+Omit this section for source-only guidance; provide an explicit verification
+boundary instead. Never imply that reading upstream tests means running them.
 
 ## Verify
 

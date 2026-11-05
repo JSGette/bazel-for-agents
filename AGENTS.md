@@ -35,6 +35,9 @@ This repository curates guidance for Bazel 9.3.1 and newer. Read this file and
   executable example needs a fixture, command, observed result, and environment.
 - Record latest stable releases separately from tested selections. Exclude
   prereleases and yanked versions from default recommendations.
+- For ruleset source reviews, an exact exported API is evidence about that
+  release, not a tested dependency graph. Read the page's verification boundary
+  before choosing versions or claiming platform compatibility.
 - Never describe a flag as unnecessary, stable, enabled, or removed without
   checking the pinned version's implementation or command help.
 - Keep missing verification explicit. Do not turn an untested claim into a
@@ -42,6 +45,7 @@ This repository curates guidance for Bazel 9.3.1 and newer. Read this file and
 - Keep the content generic: no organization-specific names, repository layouts,
   private endpoints, build wrappers, or internal conventions.
 
-The structure is approved and foundational pages are available. `README.md`
-indexes the published guidance; `docs/structure.md` also lists planned pages.
-Do not treat planned coverage as written or validated instructions.
+`README.md` indexes the published guidance; `docs/structure.md` describes its
+scope. Executable coverage and BuildBuddy integration are follow-up work in
+[issue #1](https://github.com/JSGette/bazel-for-agents/issues/1). Source-only guidance
+is explicitly marked; do not treat it as a passing integration test.

@@ -1,0 +1,1561 @@
+{
+  "observed_at": "2026-11-05",
+  "bazel_editorial_baseline": "9.3.1",
+  "registry_commit": "9bc19aec3357f320fc262ab71a8d054af6b6a74d",
+  "interpretation": "Registry candidates are the newest stable non-yanked entries observed in this snapshot. Upstream latest-stable discovery is not complete; null is unknown, not unavailable. Source review does not establish compatibility or pin the resolved graph. No combined ruleset integration is claimed.",
+  "rulesets": [
+    {
+      "module": "rules_go",
+      "observed_registry_stable_version": "0.65.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.65.0",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_go/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_go/0.65.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_go/0.65.0/MODULE.bazel",
+      "archive_url": "https://github.com/bazel-contrib/rules_go/releases/download/v0.65.0/rules_go-v0.65.0.zip",
+      "archive_integrity": "sha256-1KbpPcY5RBcrw7kVoRv6jXORyfH9wR1+Q3JPSXYX8OU=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-afin48Owvn7w6QuO9dmBLRZOQppX6MF6VKomPNA092g="
+      },
+      "upstream_source": {
+        "repository": "bazel-contrib/rules_go",
+        "tag": "v0.65.0",
+        "commit": "fb591bc876354b939ef767887e772c15f679a283"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded"
+    },
+    {
+      "module": "gazelle",
+      "observed_registry_stable_version": "0.54.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.54.0",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/gazelle/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/gazelle/0.54.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/gazelle/0.54.0/MODULE.bazel",
+      "archive_url": "https://github.com/bazel-contrib/bazel-gazelle/releases/download/v0.54.0/bazel-gazelle-v0.54.0.tar.gz",
+      "archive_integrity": "sha256-na6HwD6gaymQuINiVpCaGDZ+GR+IXVux0DDouoBJG0I=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-apPTVboP+UR4StMT5Fp4GDIKTQALirvGufdhJSth7tk="
+      },
+      "upstream_source": {
+        "repository": "bazel-contrib/bazel-gazelle",
+        "tag": "v0.54.0",
+        "commit": "ed9d0f2d159457270694ce66803ef471b5ac3be3"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded"
+    },
+    {
+      "module": "rules_cc",
+      "observed_registry_stable_version": "0.2.27",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.2.27",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_cc/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_cc/0.2.27/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_cc/0.2.27/MODULE.bazel",
+      "archive_url": "https://github.com/bazelbuild/rules_cc/releases/download/0.2.27/rules_cc-0.2.27.tar.gz",
+      "archive_integrity": "sha256-a88bRtnmKcvkyW17/Fb2EDTCGTt7FgASASgupQvvXZE=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-LA0Br9nwHaYMbhVRBrMGtD3+yiK7sLY2Cz+j53yFVoU="
+      },
+      "upstream_source": {
+        "repository": "bazelbuild/rules_cc",
+        "tag": "0.2.27",
+        "commit": "11976124184a79bfecaedf6ff5cbf2f17f815a21"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "name": "apple_support",
+          "version": "2.9.1",
+          "dev_dependency": false
+        },
+        {
+          "name": "bazel_features",
+          "version": "1.50.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "bazel_skylib",
+          "version": "1.8.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "platforms",
+          "version": "0.0.10",
+          "dev_dependency": false
+        },
+        {
+          "name": "protobuf",
+          "version": "27.0",
+          "repo_name": "com_google_protobuf",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_shell",
+          "version": "0.2.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_python",
+          "version": "2.0.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "googletest",
+          "version": "1.17.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "test_repo",
+          "repo_name": "cross_repo_test",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_testing",
+          "dev_dependency": true
+        },
+        {
+          "name": "stardoc",
+          "version": "0.8.0",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "llvm",
+      "observed_registry_stable_version": "0.8.26",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.8.26",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/llvm/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/llvm/0.8.26/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/llvm/0.8.26/MODULE.bazel",
+      "archive_url": "https://github.com/hermeticbuild/hermetic-llvm/releases/download/v0.8.26/hermetic-llvm-v0.8.26.tar.gz",
+      "archive_integrity": "sha256-sA289/36ER7p6nY7drd15idpbCe8VSz2PnTg6o4t37c=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-4x+atoQEW+wEUeBRzg6PfCS5Fg3BOjdqItsZfJXuzOE="
+      },
+      "upstream_source": {
+        "repository": "hermeticbuild/hermetic-llvm",
+        "tag": "v0.8.26",
+        "commit": "53ff474eae0a3e617ce615dec635c4b38db495c8"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "name": "bazel_lib",
+          "version": "3.2.2",
+          "dev_dependency": false
+        },
+        {
+          "name": "bazel_skylib",
+          "version": "1.9.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "bazel_features",
+          "version": "1.42.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "platforms",
+          "version": "1.1.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_cc",
+          "version": "0.2.25",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_shell",
+          "version": "0.8.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_python",
+          "version": "1.8.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "with_cfg.bzl",
+          "version": "0.12.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "tar.bzl",
+          "version": "0.10.4",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_go",
+          "version": "0.62.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "windows_support",
+          "version": "0.4.1",
+          "dev_dependency": false
+        },
+        {
+          "name": "zlib-ng",
+          "version": "2.3.3.bcr.2",
+          "repo_name": "llvm_zlib",
+          "dev_dependency": false
+        },
+        {
+          "name": "zstd",
+          "version": "1.5.7.bcr.1",
+          "repo_name": "llvm_zstd",
+          "dev_dependency": false
+        },
+        {
+          "name": "libxml2",
+          "version": "2.15.3",
+          "repo_name": "llvm_libxml2",
+          "dev_dependency": false
+        },
+        {
+          "name": "mimalloc",
+          "version": "3.5.3",
+          "dev_dependency": false
+        },
+        {
+          "name": "gazelle",
+          "version": "0.47.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "bazel_skylib_gazelle_plugin",
+          "version": "1.9.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "buildifier_prebuilt",
+          "version": "8.5.1.2",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_go",
+          "version": "0.61.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_platform",
+          "version": "0.1.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "glibc-stubs-generator",
+          "version": "2.0.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "libstdcxx-stubs-generator",
+          "version": "0.0.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "xpkgutil",
+          "version": "1.2.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "libarchive",
+          "version": "3.8.1.bcr.2",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_swift",
+          "version": "3.4.2",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_zig",
+          "version": "0.12.2",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "gcc_toolchain",
+      "observed_registry_stable_version": "0.13.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.13.0",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/gcc_toolchain/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/gcc_toolchain/0.13.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/gcc_toolchain/0.13.0/MODULE.bazel",
+      "archive_url": "https://github.com/f0rmiga/gcc-toolchain/releases/download/0.13.0/gcc-toolchain-0.13.0.tar.gz",
+      "archive_integrity": "sha256-S7o8ZjnFddVlKfa//TCqPJwz5njwZRTmS7NsF5B5AgM=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-sUzKMLxhcgq7paMxJYmaqs3nqLKc3CEJPIxb/98L67o="
+      },
+      "upstream_source": {
+        "repository": "f0rmiga/gcc-toolchain",
+        "tag": "0.13.0",
+        "commit": "310058832146d3e080bb2bf182ccb54240c2cd3a"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "name": "bazel_skylib",
+          "version": "1.8.2",
+          "dev_dependency": false
+        },
+        {
+          "name": "bazel_lib",
+          "version": "3.3.1",
+          "dev_dependency": false
+        },
+        {
+          "name": "platforms",
+          "version": "1.0.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_cc",
+          "version": "0.2.17",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_foreign_cc",
+          "version": "0.15.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "stardoc",
+          "version": "0.5.6",
+          "repo_name": "io_bazel_stardoc",
+          "dev_dependency": true
+        },
+        {
+          "name": "protobuf",
+          "version": "33.4",
+          "repo_name": "com_google_protobuf",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_shell",
+          "version": "0.6.1",
+          "dev_dependency": false
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "apple_support",
+      "observed_registry_stable_version": "2.11.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "2.11.0",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/apple_support/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/apple_support/2.11.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/apple_support/2.11.0/MODULE.bazel",
+      "archive_url": "https://github.com/bazelbuild/apple_support/releases/download/2.11.0/apple_support.2.11.0.tar.gz",
+      "archive_integrity": "sha256-RHUGzq2eOiw4K0eA9Pq427j2w/ffMJp5FCRyYsX1HgA=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-RK3+pm6NAJkO0jj3O/+UWchHu9AMDbmWUaK66y6pKZg="
+      },
+      "upstream_source": {
+        "repository": "bazelbuild/apple_support",
+        "tag": "2.11.0",
+        "commit": "373df5ad8e5de7ced7e05a16c57406856f01ee06"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "name": "bazel_features",
+          "version": "1.27.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "bazel_skylib",
+          "version": "1.9.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "platforms",
+          "version": "0.0.9",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_cc",
+          "version": "0.2.26",
+          "dev_dependency": false
+        },
+        {
+          "name": "bazel_skylib_gazelle_plugin",
+          "version": "1.5.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "gazelle",
+          "version": "0.46.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_go",
+          "version": "0.59.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_shell",
+          "version": "0.3.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "stardoc",
+          "version": "0.8.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "protobuf",
+          "version": "33.0",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "platforms",
+      "observed_registry_stable_version": "1.1.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": null,
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/platforms/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/platforms/1.1.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/platforms/1.1.0/MODULE.bazel",
+      "archive_url": "https://github.com/bazelbuild/platforms/releases/download/1.1.0/platforms-1.1.0.tar.gz",
+      "archive_integrity": "sha256-261KI6vMphceR7ee3FO9akEGejt1+eixBGVrRZ/yUEY=",
+      "registry_patches": {},
+      "upstream_source": null,
+      "integration_status": "not run; no resolved transitive graph recorded"
+    },
+    {
+      "module": "rules_python",
+      "observed_registry_stable_version": "2.4.6",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "2.4.6",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_python/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_python/2.4.6/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_python/2.4.6/MODULE.bazel",
+      "archive_url": "https://github.com/bazel-contrib/rules_python/releases/download/2.4.6/rules_python-2.4.6.tar.gz",
+      "archive_integrity": "sha256-R2W5pKnG4PuJ9GWqxbWwrAZYnJR3FENAhZMQd3rYAac=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-cSpMH1uzAvOGbqxT8UGH+x47iWJE437x2i2squgpYrc="
+      },
+      "upstream_source": {
+        "repository": "bazel-contrib/rules_python",
+        "tag": "2.4.6",
+        "commit": "943362ffab1a2e8488f50b8554256f9330d3837e"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded"
+    },
+    {
+      "module": "rules_rs",
+      "observed_registry_stable_version": "0.2.1",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.2.1",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_rs/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_rs/0.2.1/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_rs/0.2.1/MODULE.bazel",
+      "archive_url": "https://github.com/hermeticbuild/rules_rs/releases/download/v0.2.1/rules_rs-v0.2.1.tar.gz",
+      "archive_integrity": "sha256-12Lpu4XuZ9ks6jOHU6DRuK9gIsDaJjmd6V8C9RBLS00=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-8a7+ZsX9HHOSFAFHjek6AsM8ZeiusUoyM54ufe2NthE="
+      },
+      "upstream_source": {
+        "repository": "hermeticbuild/rules_rs",
+        "tag": "v0.2.1",
+        "commit": "99e2e11265235c148a2acf4201f534829248784f"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "dev_dependency": false,
+          "name": "apple_support",
+          "version": "1.24.1"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_shell",
+          "version": "0.6.1"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_lib",
+          "version": "3.0.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_features",
+          "version": "1.45.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_skylib",
+          "version": "1.4.1"
+        },
+        {
+          "dev_dependency": false,
+          "name": "hermetic_launcher",
+          "version": "0.0.8"
+        },
+        {
+          "dev_dependency": false,
+          "name": "package_metadata",
+          "version": "0.0.7"
+        },
+        {
+          "dev_dependency": false,
+          "name": "platforms",
+          "version": "1.1.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_cc",
+          "version": "0.2.8"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_proto",
+          "version": "7.1.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_python",
+          "version": "1.6.3"
+        },
+        {
+          "dev_dependency": false,
+          "name": "llvm",
+          "version": "0.8.18"
+        },
+        {
+          "name": "rules_go",
+          "version": "0.59.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "gazelle",
+          "version": "0.47.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "bazel_skylib_gazelle_plugin",
+          "version": "1.8.2",
+          "dev_dependency": true
+        },
+        {
+          "name": "buildifier_prebuilt",
+          "version": "6.1.2",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "protobuf",
+      "observed_registry_stable_version": "36.2",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "36.2",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/protobuf/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/protobuf/36.2/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/protobuf/36.2/MODULE.bazel",
+      "archive_url": "https://github.com/protocolbuffers/protobuf/releases/download/v36.2/protobuf-36.2.bazel.tar.gz",
+      "archive_integrity": "sha256-nORMOJDuk/j0A9shmOvXEfz4vq49E/GKNvW8FFh0j0A=",
+      "registry_patches": {},
+      "upstream_source": {
+        "repository": "protocolbuffers/protobuf",
+        "tag": "v36.2",
+        "commit": "2c74169b34066ceb8ddb6b882fcb3fb32d737a55"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "dev_dependency": false,
+          "name": "apple_support",
+          "version": "2.3.0",
+          "repo_name": "build_bazel_apple_support"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_proto",
+          "version": "7.1.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "abseil-cpp",
+          "version": "20250512.1"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_cc",
+          "version": "0.2.18"
+        },
+        {
+          "dev_dependency": false,
+          "name": "zlib",
+          "version": "1.3.1.bcr.5"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_features",
+          "version": "1.33.0",
+          "repo_name": "proto_bazel_features"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_skylib",
+          "version": "1.9.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "jsoncpp",
+          "version": "1.9.6.bcr.2"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_java",
+          "version": "8.6.1"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_jvm_external",
+          "version": "6.7"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_kotlin",
+          "version": "2.3.20"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_license",
+          "version": "1.0.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_pkg",
+          "version": "1.0.1"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_python",
+          "version": "1.6.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_rust",
+          "version": "0.69.0"
+        },
+        {
+          "name": "rules_ruby",
+          "version": "0.20.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_fuzzing",
+          "version": "0.5.3",
+          "dev_dependency": true
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_shell",
+          "version": "0.6.1"
+        },
+        {
+          "dev_dependency": false,
+          "name": "platforms",
+          "version": "0.0.11"
+        },
+        {
+          "dev_dependency": false,
+          "name": "re2",
+          "version": "2024-07-02.bcr.1"
+        },
+        {
+          "name": "googletest",
+          "version": "1.17.0.bcr.2",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_buf",
+          "version": "0.3.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_testing",
+          "version": "0.9.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "abseil-py",
+          "version": "2.1.0",
+          "dev_dependency": true,
+          "repo_name": "com_google_absl_py"
+        },
+        {
+          "name": "lua",
+          "version": "5.4.6",
+          "dev_dependency": true
+        },
+        {
+          "name": "googleapis",
+          "version": "0.0.0-20240819-fe8ba054a",
+          "dev_dependency": true
+        },
+        {
+          "name": "google_benchmark",
+          "version": "1.9.2",
+          "dev_dependency": true
+        },
+        {
+          "name": "com_google_protobuf_v25",
+          "version": "25.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "com_google_protobuf_previous_release",
+          "version": "33.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "jq.bzl",
+          "version": "0.6.1",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "rules_pkg",
+      "observed_registry_stable_version": "1.3.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "1.3.0",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_pkg/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_pkg/1.3.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_pkg/1.3.0/MODULE.bazel",
+      "archive_url": "https://github.com/bazelbuild/rules_pkg/releases/download/1.3/rules_pkg-1.3.0.tar.gz",
+      "archive_integrity": "sha256-5B7KIznR04uCS49/roHKJIhfLZEBEkO9EICshdy5o6M=",
+      "registry_patches": {},
+      "upstream_source": {
+        "repository": "bazelbuild/rules_pkg",
+        "tag": "1.3",
+        "commit": "c62b199e2411cb1f4ea3af4d01f743df1be135cb"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "name": "rules_license",
+          "version": "1.0.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_python",
+          "version": "1.7.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "bazel_skylib",
+          "version": "1.9.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "platforms",
+          "version": "1.0.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_cc",
+          "version": "0.2.16",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_shell",
+          "version": "0.6.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "stardoc",
+          "version": "0.7.2",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "rules_shell",
+      "observed_registry_stable_version": "0.8.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.8.0",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_shell/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_shell/0.8.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_shell/0.8.0/MODULE.bazel",
+      "archive_url": "https://github.com/bazel-contrib/rules_shell/releases/download/v0.8.0/rules_shell-v0.8.0.tar.gz",
+      "archive_integrity": "sha256-IHIfY5CIecCD+Uhp5hjqjU/17bkf+acqLr7jV/28NS0=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-LErOby3TkL3FpNp7NqS3JvgufzTmdf+zDfnKSPa/iNs="
+      },
+      "upstream_source": {
+        "repository": "bazel-contrib/rules_shell",
+        "tag": "v0.8.0",
+        "commit": "c02969a1822191a179cd70c0cedd076385446a26"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "name": "bazel_features",
+          "version": "1.18.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "bazel_skylib",
+          "version": "1.6.1",
+          "dev_dependency": false
+        },
+        {
+          "name": "platforms",
+          "version": "0.0.10",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_shellcheck",
+          "version": "0.3.3",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "rules_testing",
+      "observed_registry_stable_version": "0.9.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.9.0",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_testing/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_testing/0.9.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_testing/0.9.0/MODULE.bazel",
+      "archive_url": "https://github.com/bazelbuild/rules_testing/releases/download/v0.9.0/rules_testing-v0.9.0.tar.gz",
+      "archive_integrity": "sha256-KBtp7tceK5XO/ChO5aGp98UIgUG1jyUIvpEOsi8TuYY=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-31ZDhPvj/AKt30tzzYUdcCTC1FCWaCX+wYWBVGb29W0="
+      },
+      "upstream_source": {
+        "repository": "bazelbuild/rules_testing",
+        "tag": "v0.9.0",
+        "commit": "db007bfee840cebcb6f955b80973ba866de38947"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded"
+    },
+    {
+      "module": "rules_rust",
+      "observed_registry_stable_version": "0.75.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.75.0",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_rust/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_rust/0.75.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_rust/0.75.0/MODULE.bazel",
+      "archive_url": "https://github.com/bazelbuild/rules_rust/releases/download/0.75.0/rules_rust-0.75.0.tar.gz",
+      "archive_integrity": "sha256-EJ6mMpL5LrHSeBY8p3qAr+VT6JqaZdHfKCoaSlnprV4=",
+      "registry_patches": {},
+      "upstream_source": {
+        "repository": "bazelbuild/rules_rust",
+        "tag": "0.75.0",
+        "commit": "21234a3c7d71e70f858e7e6d783138768b300e64"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "dev_dependency": false,
+          "name": "bazel_features",
+          "version": "1.50.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_skylib",
+          "version": "1.8.2"
+        },
+        {
+          "dev_dependency": false,
+          "name": "platforms",
+          "version": "1.1.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_cc",
+          "version": "0.2.9"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_license",
+          "version": "1.0.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_shell",
+          "version": "0.6.1"
+        },
+        {
+          "dev_dependency": false,
+          "name": "apple_support",
+          "version": "1.24.1"
+        },
+        {
+          "name": "rules_python",
+          "version": "1.5.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_testing",
+          "version": "0.7.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "bazel_ci_rules",
+          "version": "1.0.0",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "rules_rust_prost",
+      "observed_registry_stable_version": "0.75.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.75.0",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_rust_prost/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_rust_prost/0.75.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_rust_prost/0.75.0/MODULE.bazel",
+      "archive_url": "https://github.com/bazelbuild/rules_rust/releases/download/0.75.0/rules_rust-0.75.0.tar.gz",
+      "archive_integrity": "sha256-EJ6mMpL5LrHSeBY8p3qAr+VT6JqaZdHfKCoaSlnprV4=",
+      "registry_patches": {},
+      "upstream_source": {
+        "repository": "bazelbuild/rules_rust",
+        "tag": "0.75.0",
+        "commit": "21234a3c7d71e70f858e7e6d783138768b300e64"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "dev_dependency": false,
+          "name": "rules_rust",
+          "version": "0.75.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "platforms",
+          "version": "1.1.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_features",
+          "version": "1.32.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_skylib",
+          "version": "1.8.2"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_cc",
+          "version": "0.2.9"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_proto",
+          "version": "7.1.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "protobuf",
+          "version": "28.3",
+          "repo_name": "com_google_protobuf"
+        },
+        {
+          "name": "googleapis",
+          "version": "0.0.0-20241220-5e258e33.bcr.1",
+          "dev_dependency": true,
+          "repo_name": "com_google_googleapis"
+        },
+        {
+          "name": "bazel_ci_rules",
+          "version": "1.0.0",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "rules_foreign_cc",
+      "observed_registry_stable_version": "0.17.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.17.0",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_foreign_cc/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_foreign_cc/0.17.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_foreign_cc/0.17.0/MODULE.bazel",
+      "archive_url": "https://github.com/bazel-contrib/rules_foreign_cc/releases/download/0.17.0/rules_foreign_cc-0.17.0.tar.gz",
+      "archive_integrity": "sha256-PQicRsG719oQRG3kV648++ewz66INtYiX2KhXJATTKo=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-2LK/hI7BrXU2p86az3iXvP/33mV3OnrC+cAV0jsAgJ0="
+      },
+      "upstream_source": {
+        "repository": "bazel-contrib/rules_foreign_cc",
+        "tag": "0.17.0",
+        "commit": "aa554e6002e686a95ef08d93f2f205c4d299c8e0"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "name": "bazel_features",
+          "version": "1.47.1",
+          "dev_dependency": false
+        },
+        {
+          "name": "bazel_skylib",
+          "version": "1.9.2",
+          "dev_dependency": false
+        },
+        {
+          "name": "platforms",
+          "version": "1.0.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_cc",
+          "version": "0.2.18",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_cc_autoconf",
+          "version": "0.32.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_python",
+          "version": "1.9.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "rules_shell",
+          "version": "0.8.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "bazel_lib",
+          "version": "3.2.0",
+          "dev_dependency": false
+        },
+        {
+          "name": "m4",
+          "version": "1.4.21.bcr.8",
+          "dev_dependency": false
+        },
+        {
+          "name": "make",
+          "version": "4.4.1.bcr.3",
+          "dev_dependency": false
+        },
+        {
+          "name": "meson",
+          "version": "1.12.1",
+          "dev_dependency": false
+        },
+        {
+          "name": "ninja",
+          "version": "1.13.2",
+          "dev_dependency": false
+        },
+        {
+          "name": "pkgconf",
+          "version": "3.0.10",
+          "dev_dependency": false
+        },
+        {
+          "name": "gazelle",
+          "version": "0.44.0",
+          "repo_name": "bazel_gazelle",
+          "dev_dependency": true
+        },
+        {
+          "name": "bazel_skylib_gazelle_plugin",
+          "version": "1.9.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_shellcheck",
+          "version": "0.7.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_bazel_integration_test",
+          "version": "0.37.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "bazel_ci_rules",
+          "version": "1.0.0",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "bazel_lib",
+      "observed_registry_stable_version": "3.7.2",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "3.7.2",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/bazel_lib/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/bazel_lib/3.7.2/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/bazel_lib/3.7.2/MODULE.bazel",
+      "archive_url": "https://github.com/bazel-contrib/bazel-lib/releases/download/v3.7.2/bazel-lib-v3.7.2.tar.gz",
+      "archive_integrity": "sha256-x1+MN1+fLHOlZduhiPkaTo18oW3SthUtOIbCa78cZTI=",
+      "registry_patches": {
+        "go_dev_dep.patch": "sha256-boWp7svEiLDFXEIg6hq70JcTom4rYFNzvwfpCPrusDw=",
+        "module_dot_bazel_version.patch": "sha256-fTTM8Or2usOzP99CbwztvLtty9uXiSzygA9IRFXoAWg="
+      },
+      "upstream_source": {
+        "repository": "bazel-contrib/bazel-lib",
+        "tag": "v3.7.2",
+        "commit": "904332fd1c978e1d84161c120b26533df279c3dc"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "dev_dependency": false,
+          "name": "bazel_features",
+          "version": "1.9.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_skylib",
+          "version": "1.8.1"
+        },
+        {
+          "dev_dependency": false,
+          "name": "platforms",
+          "version": "0.0.10"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_shell",
+          "version": "0.4.1"
+        },
+        {
+          "name": "gazelle",
+          "version": "0.52.2",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_go",
+          "version": "0.62.0",
+          "dev_dependency": true,
+          "repo_name": "io_bazel_rules_go"
+        },
+        {
+          "name": "bazel_skylib_gazelle_plugin",
+          "version": "1.9.2",
+          "dev_dependency": true
+        },
+        {
+          "name": "buildifier_prebuilt",
+          "version": "8.5.1.3",
+          "dev_dependency": true
+        },
+        {
+          "name": "external_test_repo",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "bazel_skylib",
+      "observed_registry_stable_version": "1.9.2",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "1.9.2",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/bazel_skylib/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/bazel_skylib/1.9.2/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/bazel_skylib/1.9.2/MODULE.bazel",
+      "archive_url": "https://github.com/bazelbuild/bazel-skylib/releases/download/1.9.2/bazel-skylib-1.9.2.tar.gz",
+      "archive_integrity": "sha256-N837xvrv6pT3s3dgowXJjAiYERbCvJ6CHjtCMiH62Mg=",
+      "registry_patches": {},
+      "upstream_source": {
+        "repository": "bazelbuild/bazel-skylib",
+        "tag": "1.9.2",
+        "commit": "3de43ed45e1c7923d53c4db56ca3de3e46601580"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "dev_dependency": false,
+          "name": "platforms",
+          "version": "0.0.10"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_license",
+          "version": "1.0.0"
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "bazel_features",
+      "observed_registry_stable_version": "1.54.1",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "1.54.1",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/bazel_features/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/bazel_features/1.54.1/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/bazel_features/1.54.1/MODULE.bazel",
+      "archive_url": "https://github.com/bazel-contrib/bazel_features/releases/download/v1.54.1/bazel_features-v1.54.1.tar.gz",
+      "archive_integrity": "sha256-eQtmDJyzWtuRBxpPbmLSmYinODy7lIs5qnwAZe6h4DU=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-hTC8/o10URY+bLxkTpsfACGWqGMbXWTRMpyPhQ/wXr8="
+      },
+      "upstream_source": {
+        "repository": "bazel-contrib/bazel_features",
+        "tag": "v1.54.1",
+        "commit": "6f5b91edb290af78d50ea12c8c2db44d46f1fcde"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "dev_dependency": false,
+          "name": "bazel_skylib",
+          "version": "1.6.1"
+        },
+        {
+          "name": "protobuf",
+          "version": "33.6",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "rules_multitool",
+      "observed_registry_stable_version": "1.11.1",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "1.11.1",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_multitool/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_multitool/1.11.1/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_multitool/1.11.1/MODULE.bazel",
+      "archive_url": "https://github.com/bazel-contrib/rules_multitool/releases/download/v1.11.1/rules_multitool-1.11.1.tar.gz",
+      "archive_integrity": "sha256-bQ2fsjHrRQ/7Os7IeaJQ6d6mnHrPyU8TjVMQOqUSPwg=",
+      "registry_patches": {},
+      "upstream_source": {
+        "repository": "bazel-contrib/rules_multitool",
+        "tag": "v1.11.1",
+        "commit": "0be566f364df52308bfb7629e888e5084c3f5a85"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "dev_dependency": false,
+          "name": "bazel_lib",
+          "version": "3.0.0-rc.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_features",
+          "version": "1.11.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_skylib",
+          "version": "1.5.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "buildifier_prebuilt",
+          "version": "7.3.1"
+        },
+        {
+          "dev_dependency": false,
+          "name": "platforms",
+          "version": "0.0.10"
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "with_cfg.bzl",
+      "observed_registry_stable_version": "1.0.2",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "1.0.2",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/with_cfg.bzl/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/with_cfg.bzl/1.0.2/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/with_cfg.bzl/1.0.2/MODULE.bazel",
+      "archive_url": "https://github.com/fmeum/with_cfg.bzl/releases/download/v1.0.2/with_cfg.bzl-v1.0.2.tar.gz",
+      "archive_integrity": "sha256-0akQ993ppK7d+m3KowfpP3OJqGCh6fXxO3JWisCoeP8=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-FxwqZHYdoaMY/9+xBtDMC3RtCetWcvxzhnhv4H9dgkk="
+      },
+      "upstream_source": {
+        "repository": "fmeum/with_cfg.bzl",
+        "tag": "v1.0.2",
+        "commit": "9b8b10962419346889e528cbe57a539754489d57"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "dev_dependency": false,
+          "name": "bazel_features",
+          "version": "1.24.0"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_skylib",
+          "version": "1.4.1"
+        },
+        {
+          "dev_dependency": false,
+          "name": "platforms",
+          "version": "0.0.6"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_cc",
+          "version": "0.0.17"
+        },
+        {
+          "dev_dependency": false,
+          "name": "rules_java",
+          "version": "8.6.0"
+        },
+        {
+          "name": "aspect_bazel_lib",
+          "version": "2.21.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "bazel_skylib_gazelle_plugin",
+          "version": "1.4.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "buildifier_prebuilt",
+          "version": "8.0.3",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_go",
+          "version": "0.59.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "gazelle",
+          "version": "0.45.0",
+          "dev_dependency": true,
+          "repo_name": "bazel_gazelle"
+        },
+        {
+          "name": "protobuf",
+          "version": "34.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_python",
+          "version": "1.6.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_shell",
+          "version": "0.6.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_testing",
+          "version": "0.4.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "stardoc",
+          "version": "0.8.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_android",
+          "version": "0.7.1",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "re.bzl",
+      "observed_registry_stable_version": "0.4.1",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.4.1",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/re.bzl/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/re.bzl/0.4.1/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/re.bzl/0.4.1/MODULE.bazel",
+      "archive_url": "https://github.com/jvolkman/re.bzl/releases/download/v0.4.1/re.bzl-v0.4.1.tar.gz",
+      "archive_integrity": "sha256-ukP2H3/lDipMXfdc48E4CwGI3Shy8wnXi1rQfB8st8U=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-nmpCEFwKo3RVNTN/61GDk57O20N2CtHY9/ZEwfIs+vg="
+      },
+      "upstream_source": {
+        "repository": "jvolkman/re.bzl",
+        "tag": "v0.4.1",
+        "commit": "aa210e888590cb3c519a9f8a967a49668461d3ca"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "dev_dependency": false,
+          "name": "package_metadata",
+          "version": "0.0.7"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_skylib",
+          "version": "1.8.2"
+        },
+        {
+          "name": "bazel_lib",
+          "version": "3.0.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_testing",
+          "version": "0.9.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "bazelrc-preset.bzl",
+          "version": "1.8.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "buildifier_prebuilt",
+          "version": "8.2.1.1",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    },
+    {
+      "module": "toml.bzl",
+      "observed_registry_stable_version": "0.5.0",
+      "observed_upstream_latest_stable_version": null,
+      "source_reviewed_version": "0.5.0",
+      "selected_integration_version": null,
+      "tested_bazel_versions": [],
+      "tested_platforms": [],
+      "registry_metadata_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/toml.bzl/metadata.json",
+      "registry_source_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/toml.bzl/0.5.0/source.json",
+      "registry_manifest_url": "https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/toml.bzl/0.5.0/MODULE.bazel",
+      "archive_url": "https://github.com/jvolkman/toml.bzl/releases/download/v0.5.0/toml.bzl-v0.5.0.tar.gz",
+      "archive_integrity": "sha256-tb/dXFSIrTfWDbGI0tF7wJP3GbiLIIhs6fsJK/9rDmc=",
+      "registry_patches": {
+        "module_dot_bazel_version.patch": "sha256-4XyKWDYRR4h7pitVimUdnJsOctFtyaEUVNihl1XqvBM="
+      },
+      "upstream_source": {
+        "repository": "jvolkman/toml.bzl",
+        "tag": "v0.5.0",
+        "commit": "336bff08f5ebff07f9e3836f47e7ba25a3b392c9"
+      },
+      "integration_status": "not run; no resolved transitive graph recorded",
+      "declared_module_requests": [
+        {
+          "dev_dependency": false,
+          "name": "package_metadata",
+          "version": "0.0.7"
+        },
+        {
+          "dev_dependency": false,
+          "name": "bazel_skylib",
+          "version": "1.8.2"
+        },
+        {
+          "name": "bazel_lib",
+          "version": "3.0.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "bazelrc-preset.bzl",
+          "version": "1.8.0",
+          "dev_dependency": true
+        },
+        {
+          "name": "buildifier_prebuilt",
+          "version": "8.2.1.1",
+          "dev_dependency": true
+        },
+        {
+          "name": "rules_testing",
+          "version": "0.9.0",
+          "dev_dependency": true
+        }
+      ],
+      "declared_module_requests_scope": "Declared BCR manifest requests including development scope, not selected versions or a resolved graph."
+    }
+  ]
+}

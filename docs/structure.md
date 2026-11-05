@@ -7,12 +7,12 @@ The initial technical findings and limitations are in [evidence.md](evidence.md)
 
 ## File layout
 
-The tree below describes the intended end state. Nine foundational pages are now
-available: all six core pages, Starlark dialect/contexts and collections, and
-declaring actions. Executed fixtures cover sets, a producer/consumer rule pair,
-and target/load visibility. Each has a verification record. Module resolution,
-toolchain resolution, language integrations, and remote execution remain planned.
-Avoid creating empty topic files.
+The topic files in the tree below are published as source-verified guidance or
+as task checklists composing that guidance. Executed fixtures cover sets, a
+producer/consumer rule pair, and target/load visibility; their records remain
+separate from the wider source review. Exhaustive snippets, integration graphs,
+and remote CI are deferred to [issue #1](https://github.com/JSGette/bazel-for-agents/issues/1).
+The future automation directories are not implemented placeholders.
 
 ```text
 README.md                          # task-oriented index and coverage status
@@ -20,9 +20,11 @@ AGENTS.md                          # how to select and apply context
 .bazelversion                      # exact baseline for verification fixtures
 versions/
   baseline.json                    # Bazel and protocol reference identity
-  rulesets.json                    # proposed: observed, selected, and tested versions
+  rulesets.json                    # observed/source-reviewed identities; integration gaps
 core/
   labels-and-targets.md
+  files-and-packages.md
+  aspects.md
   visibility.md                    # targets, .bzl loads, macro export boundaries
   phases-and-graphs.md
   rule-contract.md
@@ -48,6 +50,7 @@ modules/
   lockfile-and-vendor.md
   overrides-and-patches.md
 configuration/
+  rc-and-invocations.md
   platforms-and-constraints.md
   select-and-build-settings.md
   transitions.md
@@ -58,12 +61,12 @@ toolchains/
   execution-groups.md
   cross-compilation.md
 rulesets/
-  README.md                        # inventory, priority, and verification status
+  README.md                        # task routes, inventory, and verification status
   go/{setup,targets,dependencies,cgo}.md
   gazelle/{generation,directives}.md
   cc/{setup,targets,linking}.md
   python/{setup,targets,dependencies,native-extensions}.md
-  rust/{choosing-integration,setup,dependencies,build-scripts,ffi}.md
+  rust/{choosing-integration,setup,targets,dependencies,build-scripts,ffi}.md
   protobuf/{setup,code-generation,grpc,prost}.md
   shell/{setup,targets,runfiles}.md
   packaging/{file-mappings,archives,metadata}.md
@@ -72,7 +75,7 @@ rulesets/
   gcc/{setup,cross-compilation}.md
   apple/{setup,platforms}.md
   windows/{toolchain-selection,paths-and-processes}.md
-  utilities/{library-selection,multitool,regex}.md
+  utilities/{library-selection,multitool,regex,toml,configuration-wrappers}.md
 testing/
   starlark-unit-tests.md
   analysis-tests.md
@@ -161,7 +164,8 @@ other adjacent APIs can get separate pages when validated use cases justify them
 Aim for one decision per page, generally 60–150 lines of guidance excluding
 evidence. This is an editorial target, not a hard limit. Every page should name
 its task, prerequisites, verified versions, preferred pattern, boundaries,
-verification command, and sources. Front matter should make status machine-readable.
+verification boundary, and sources. Runnable fixtures additionally need commands
+and observed assertions. Front matter should make status machine-readable.
 
 Do not create a catalog of obsolete examples. Teach the current pattern directly.
 Mention a tempting mistake only when it prevents a likely error, without embedding
@@ -171,18 +175,20 @@ Keep nested `AGENTS.md` files for genuine local authoring constraints, if needed
 Do not use them as containers for all technical content. The root index and
 explicit prerequisite links should control how much context an agent reads.
 
-## Suggested delivery order
+## Coverage boundaries and follow-up
 
-1. **Foundations:** core concepts, Starlark collections and contexts, providers,
-   actions, Bzlmod, platform and toolchain resolution. Include a set probe, a
-   producing rule, and a small custom toolchain fixture.
-2. **Initial language paths:** Go/Gazelle, C/C++, Python, Rust, protobuf, shell,
-   and their dependency/toolchain examples. Verify each selected stable release.
-3. **Production tasks:** native interop, cross-compilation, packaging, remote
-   execution, caching, and targeted diagnostics.
-4. **Maintenance:** automate claim metadata, source identity, snippet consistency,
-   link checking, and fixture runs; evaluate new releases before promotion.
+The fundamentals, initial language paths, native interoperability, packaging,
+remote model, and diagnostic sections now have source-reviewed guidance. The
+[README](../README.md) and [ruleset index](../rulesets/README.md) route every page.
+Task checklists compose those pages without claiming end-to-end execution.
 
-The first useful milestone should let an agent write and test a small custom rule,
-choose collections correctly, resolve a toolchain, and add a language dependency
-using only version-verified context.
+Executable assertions for the expanded coverage, resolved ruleset integration
+graphs, additional platforms, BuildBuddy orchestration, and recurring upgrade
+checks are tracked in [issue #1](https://github.com/JSGette/bazel-for-agents/issues/1).
+C++/Python gRPC release selection, supply-chain metadata/SBOM integrations, and
+eBPF-specific rules remain explicit coverage gaps. Do not infer guidance for
+those areas from an adjacent language or compiler chapter.
+
+The source reference should let an agent identify the correct modern APIs and
+reason about a build's graphs and contracts. Passing behavior for a particular
+project still requires that project's exact resolved dependencies and tests.

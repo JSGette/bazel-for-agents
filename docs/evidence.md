@@ -1,75 +1,64 @@
-# Initial evidence
+# Evidence index
 
-Checked on 2026-11-05. These initial findings seeded the first topics. The entire
-planned reference is not yet written or verified. Published foundation pages
-are indexed in the [README](../README.md); their more detailed claim records are
-listed below.
+Reviewed on **2026-11-05**. The [task index](../README.md) routes readers to
+instruction pages; this index routes maintainers to the evidence behind them.
+Source review, inspecting an upstream test, and executing a local fixture are
+separate kinds of evidence. None establishes unmeasured agent-performance gains.
 
-## Published foundation evidence
+## Exact reference identities
 
-- [Labels, phases, and graphs](../verification/core-labels-phases.md).
-- [Rules and providers](../verification/core-rules-providers.md).
-- [Outputs, runfiles, and actions](../verification/core-outputs-actions.md).
-- [Target and load visibility](../verification/core-visibility.md).
-- [Starlark dialect and collections](../verification/starlark-basics.md).
-- [Executed producer/consumer fixture](../verification/foundations.md).
+- **Bazel 9.3.1:** source commit `fee2bf2d1c14bc2096068a4d46f1842472092044`.
+  The official binary was checksum-verified and used for the existing fixtures;
+  see [binary identity](../verification/starlark-set.md).
+- **REAPI v2.12.0:** source commit `9e084d0e43e717128ee72b5be584a7ba33e8006b`.
+  The protocol reference and Bazel's declared client range are recorded separately
+  in [capabilities and versions](../remote/capabilities-and-versions.md).
+- **Rulesets:** release source identity and registry snapshot are recorded in
+  [versions/rulesets.json](../versions/rulesets.json) and the ledgers below.
+  Reviewed source versions are candidates, not a resolved/tested combination.
 
-These records pin the Bazel 9.3.1 source commit and separate source inspection
-from execution. The README also explains the research motivation; functional
-fixture checks do not measure whether this reference improves coding agents.
+See [baseline metadata](../versions/baseline.json) and the
+[verification policy](../maintenance/verification.md) for the exact interpretation.
 
-## Reference identities
+## Source review records
 
-- **Bazel 9.3.1:** confirmed by the [official release](https://github.com/bazelbuild/bazel/releases/tag/9.3.1),
-  exact-tag source, and a locally executed official binary. See the
-  [probe record](../verification/starlark-set.md) for its SHA-256 and output.
-- **REAPI v2.12.0:** latest stable release returned by the upstream releases API
-  during this investigation; tag commit `9e084d0e43e717128ee72b5be584a7ba33e8006b`.
-  Sources: [release](https://github.com/bazelbuild/remote-apis/releases/tag/v2.12.0),
-  [tag identity](https://api.github.com/repos/bazelbuild/remote-apis/git/ref/tags/v2.12.0).
-- **Rulesets:** current stable registry candidates appear with an immutable BCR
-  snapshot in the [inventory](../rulesets/README.md). Their examples have not yet
-  been tested individually or together on the exact baseline.
+| Coverage | Evidence |
+| --- | --- |
+| Labels, phases, and graphs | [Core labels and phases](../verification/core-labels-phases.md) |
+| Rule implementations and providers | [Rules and providers](../verification/core-rules-providers.md) |
+| Outputs, runfiles, and initial action model | [Outputs and actions](../verification/core-outputs-actions.md) |
+| Dependency and load visibility | [Visibility](../verification/core-visibility.md) |
+| Starlark dialect and collections | [Starlark basics](../verification/starlark-basics.md) |
+| Modules, repositories, files, and package boundaries | [Modules](../verification/modules.md) |
+| Configuration, rc files, and toolchain resolution | [Configuration and toolchains](../verification/configuration-toolchains.md) |
+| Mutability, depsets, macros, advanced actions, testing, and aspects | [Starlark, actions, and testing](../verification/starlark-actions-testing.md) |
+| Go, Gazelle, Python | [Language rules](../verification/rulesets-go-python.md) |
+| C/C++, shell, packaging, native build tools and platforms | [Native rulesets](../verification/rulesets-native.md) |
+| Rust, protobuf, RPC, Prost, and utility libraries | [Rust, protobuf, utilities](../verification/rulesets-rust-proto-utilities.md) |
+| Query graphs, logs, profiles, and events | [Diagnostics](../verification/diagnostics.md) |
+| REAPI and inspected Bazel remote-client behavior | [Remote](../verification/remote.md) |
 
-## Claims checked against Bazel 9.3.1
+## Executed fixtures
 
-| Claim | Evidence | Status and limits |
-| --- | --- | --- |
-| `set()` is enabled by default; its controlling flag can still disable it. | [BuildLanguageOptions](https://github.com/bazelbuild/bazel/blob/9.3.1/src/main/java/com/google/devtools/build/lib/packages/semantics/BuildLanguageOptions.java#L781) | Source-verified; constructor, membership, deduplication, mutation, union, and sorting also passed in the [local probe](../verification/starlark-set.md). |
-| Sets require hashable elements, iterate in first-addition order, and have no set-literal syntax. | [StarlarkSet](https://github.com/bazelbuild/bazel/blob/9.3.1/src/main/java/net/starlark/java/eval/StarlarkSet.java#L44) | Source-verified. Ordering and rejected syntax were not separately runtime-tested. |
-| Rule implementations run during analysis and register actions for later execution. | [Rules](https://github.com/bazelbuild/bazel/blob/9.3.1/site/en/extending/rules.md) | Source-verified; the probe also built a declared output using `FileWrite` and `DefaultInfo`. |
-| Providers expose information to dependent rule implementations. | [Providers](https://github.com/bazelbuild/bazel/blob/9.3.1/site/en/extending/rules.md#L416) | Source-verified; a custom-provider fixture remains planned. |
-| Depsets support shared transitive aggregation across dependency graphs. | [Depset structure](https://github.com/bazelbuild/bazel/blob/9.3.1/site/en/extending/depsets.md#L12) | Source-verified. Our recommendation is to distinguish local set operations from transitive propagation. |
-| Symbolic macros are enabled by default. | [BuildLanguageOptions](https://github.com/bazelbuild/bazel/blob/9.3.1/src/main/java/com/google/devtools/build/lib/packages/semantics/BuildLanguageOptions.java#L261) | Source-verified; macro examples are not yet tested. |
-| Automatic loading of externalized rule symbols in the main repository is disabled by default. | [BuildLanguageOptions](https://github.com/bazelbuild/bazel/blob/9.3.1/src/main/java/com/google/devtools/build/lib/packages/semantics/BuildLanguageOptions.java#L159) | Source-verified. This does not imply all native symbols have been removed. |
-| Module version selection uses versions requested in the dependency graph rather than automatically choosing the newest published version. | [Module version selection](https://github.com/bazelbuild/bazel/blob/9.3.1/site/en/external/module.md#version-selection) | Source-verified; overrides and compatibility levels need separate treatment. |
-| Module extensions create repositories; `use_repo` exposes selected generated repositories to the consuming module. | [Module extensions](https://github.com/bazelbuild/bazel/blob/9.3.1/site/en/external/extension.md) | Source-verified; each ruleset's extension API needs separate verification. |
-| Toolchain resolution checks target and execution constraints separately. | [SingleToolchainResolutionFunction](https://github.com/bazelbuild/bazel/blob/9.3.1/src/main/java/com/google/devtools/build/lib/skyframe/toolchains/SingleToolchainResolutionFunction.java#L163) | Source-verified; registration precedence and allowed toolchain types also need coverage. |
-| Normal execution-platform selection scores suitable platforms by the number of resolved requested toolchains, including optional types; ties preserve order. | [Implementation](https://github.com/bazelbuild/bazel/blob/9.3.1/src/main/java/com/google/devtools/build/lib/skyframe/toolchains/ToolchainResolutionFunction.java#L329), [optional-toolchain test](https://github.com/bazelbuild/bazel/blob/9.3.1/src/test/java/com/google/devtools/build/lib/skyframe/toolchains/ToolchainResolutionFunctionTest.java#L328) | Source-verified, including upstream test inspection. Those tests were not run here. Forced-platform handling is separate. |
+| Fixture | Observed scope |
+| --- | --- |
+| [Starlark set](../verification/starlark-set.md) | Constructor, deduplication, membership, mutation, union, and sorted generated contents. |
+| [Foundations](../verification/foundations.md) | Producer/consumer rules, providers, outputs/runfiles metadata, optional output selection, query views, generated contents, and expected provider rejection. |
+| [Visibility](../verification/core-visibility.md) | Allowed target/load access and expected failures for denied access. |
 
-## Protocol claims
+The records contain versions, commands, environment, observed results, and limits.
+They do not cover all new source-reviewed pages. Exhaustive executable assertions,
+ruleset integration graphs, and BuildBuddy CI are follow-up work in
+[issue #1](https://github.com/JSGette/bazel-for-agents/issues/1).
 
-REAPI defines separate services for action execution, the action cache, and
-content-addressable storage. Its capabilities response describes API version
-bounds and cache/execution capabilities. These facts were verified from the
-[pinned protocol definition](https://github.com/bazelbuild/remote-apis/blob/9e084d0e43e717128ee72b5be584a7ba33e8006b/build/bazel/remote/execution/v2/remote_execution.proto).
-They do not establish that Bazel 9.3.1 implements every feature in that release,
-or that a particular remote service supports them. Client feature auditing and
-client/server integration tests remain future work.
+## Resolving conflicting upstream documentation
 
-## Documentation discrepancies for maintainers
+Versioned documentation can still be stale. The source reviews found discrepancies
+in collection support, repository reproducibility, compatibility-level arguments,
+toolchain platform ranking, transition validation, aspect output merging, and
+several ruleset examples. The relevant page and ledger cite the implementation or
+test that resolves each discrepancy. Reading a test establishes its intended
+assertion, not that it passed in this environment.
 
-The Bazel 9.3.1 source tree itself contains stale guidance:
-
-- Its [language overview](https://github.com/bazelbuild/bazel/blob/9.3.1/site/en/rules/language.md)
-  contains language limitations that conflict with the set implementation and
-  successful binary probe.
-- Its [depset guide](https://github.com/bazelbuild/bazel/blob/9.3.1/site/en/extending/depsets.md#L306)
-  retains a dictionary-based set example.
-- Its [toolchain guide](https://github.com/bazelbuild/bazel/blob/9.3.1/site/en/extending/toolchains.md)
-  retains obsolete registration sources and an incomplete platform-selection
-  description. The version-specific implementation and tests above support the
-  planned resolution page.
-
-Agent-facing instructions should teach the resolved current behavior directly,
-without reproducing stale recipes.
+Teach the verified current behavior directly. Do not reproduce obsolete recipes
+in an agent-facing page merely to explain why they are obsolete.

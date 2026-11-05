@@ -1,12 +1,12 @@
-# Ruleset coverage draft
+# Ruleset reference
 
-Status: proposed coverage, with version discovery verified on 2026-11-05. No compatibility tests have been run for this inventory.
+Status: task guidance and exact-release source review published on 2026-11-05. No ruleset integration graph or platform compatibility run is claimed.
 
 The versions below are the newest non-yanked, non-prerelease entries observed in the [Bazel Central Registry snapshot](https://github.com/bazelbuild/bazel-central-registry/tree/9bc19aec3357f320fc262ab71a8d054af6b6a74d). They are candidates for the repository's tested baseline, not a claim that every upstream release is available in the registry or that all candidates work together on Bazel 9.3.1.
 
-Priority 1 defines the first useful edition. Priority 2 extends it after the core examples are verified. Each family should become an index of short task-specific pages; the scope column is a writing plan, not yet API guidance.
+The table records release discovery and editorial priority. The task routes below point to published source-reviewed APIs and their evidence boundaries. Priority does not indicate measured compatibility or a requirement to adopt every family.
 
-| Priority | Family | Candidate versions and evidence | Planned scope |
+| Priority | Family | Candidate versions and evidence | Scope |
 | --- | --- | --- | --- |
 | 1 | Go | [rules_go 0.65.0](https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_go/metadata.json); [gazelle 0.54.0](https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/gazelle/metadata.json) | SDK selection; Go modules; BUILD generation; cgo; cross compilation; tests and runfiles. |
 | 1 | C/C++ | [rules_cc 0.2.27](https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/rules_cc/metadata.json) | Explicit rule loads; compilation/linking providers; toolchain use; headers; shared libraries; interoperability. |
@@ -24,14 +24,39 @@ Priority 1 defines the first useful edition. Priority 2 extends it after the cor
 | 2 | Configuration helpers | [with_cfg.bzl 1.0.2](https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/with_cfg.bzl/metadata.json) | Scoped configuration wrappers; interaction with transitions and configured targets. |
 | 2 | Parsing helpers | [re.bzl 0.4.1](https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/re.bzl/metadata.json); [toml.bzl 0.5.0](https://github.com/bazelbuild/bazel-central-registry/blob/9bc19aec3357f320fc262ab71a8d054af6b6a74d/modules/toml.bzl/metadata.json) | Regex and TOML helpers; appropriate analysis-time scope. |
 
+## Read by task
+
+| Family | Published pages |
+| --- | --- |
+| Go | [Setup](go/setup.md), [targets](go/targets.md), [dependencies](go/dependencies.md), [cgo](go/cgo.md) |
+| Gazelle | [Generation](gazelle/generation.md), [directives](gazelle/directives.md) |
+| C/C++ | [Setup](cc/setup.md), [targets](cc/targets.md), [linking](cc/linking.md) |
+| Python | [Setup](python/setup.md), [targets](python/targets.md), [dependencies](python/dependencies.md), [native extensions](python/native-extensions.md) |
+| Rust | [Choosing integration](rust/choosing-integration.md), [setup](rust/setup.md), [targets](rust/targets.md), [dependencies](rust/dependencies.md), [build scripts](rust/build-scripts.md), [FFI](rust/ffi.md) |
+| Protobuf/RPC | [Setup](protobuf/setup.md), [code generation](protobuf/code-generation.md), [gRPC](protobuf/grpc.md), [Prost](protobuf/prost.md) |
+| Shell | [Setup](shell/setup.md), [targets](shell/targets.md), [runfiles](shell/runfiles.md) |
+| Packaging | [Mappings](packaging/file-mappings.md), [archives](packaging/archives.md), [metadata](packaging/metadata.md) |
+| Foreign C/C++ | [Setup](foreign-cc/setup.md), [toolchains](foreign-cc/toolchains.md), [hermeticity](foreign-cc/hermeticity.md) |
+| LLVM | [Setup](llvm/setup.md), [sysroots](llvm/sysroots.md), [cross-compilation](llvm/cross-compilation.md) |
+| GCC | [Setup](gcc/setup.md), [cross-compilation](gcc/cross-compilation.md) |
+| Apple | [Setup](apple/setup.md), [platforms](apple/platforms.md) |
+| Windows | [Toolchain selection](windows/toolchain-selection.md), [paths and processes](windows/paths-and-processes.md) |
+| Testing | [Starlark units](../testing/starlark-unit-tests.md), [analysis](../testing/analysis-tests.md), [execution](../testing/execution-tests.md), [integration](../testing/rule-integration-tests.md) |
+| Utilities | [Library selection](utilities/library-selection.md), [multitool](utilities/multitool.md), [regex](utilities/regex.md), [TOML](utilities/toml.md), [configuration wrappers](utilities/configuration-wrappers.md) |
+
+[Machine-readable versions](../versions/rulesets.json) distinguish source-reviewed
+releases from unselected integration versions and unknown upstream-latest status.
+The language/compiler/SDK versions configured by a ruleset are separate inputs.
+No universal MODULE.bazel combining this inventory has been validated.
+
 ## Selection details
 
-- Keep `rules_rs` and direct `rules_rust` setup in separate recipes. The [rules_rs v0.2.1 README](https://github.com/hermeticbuild/rules_rs/blob/v0.2.1/README.md) describes its redistribution of core Rust rules and its own Cargo/toolchain integration.
+- Keep `rules_rs` and direct `rules_rust` setup in separate recipes. The [rules_rs v0.2.1 README](https://github.com/hermeticbuild/rules_rs/blob/99e2e11265235c148a2acf4201f534829248784f/README.md) describes its redistribution of core Rust rules and its own Cargo/toolchain integration.
 - `llvm` here means [hermeticbuild/hermetic-llvm](https://github.com/hermeticbuild/hermetic-llvm/tree/v0.8.26). Document its particular configuration API rather than treating LLVM toolchain rulesets as interchangeable.
-- `re.bzl` is a [Starlark regex library](https://github.com/jvolkman/re.bzl/blob/v0.4.1/README.md), unrelated to the Remote Execution API.
+- `re.bzl` is a [Starlark regex library](https://github.com/jvolkman/re.bzl/blob/aa210e888590cb3c519a9f8a967a49668461d3ca/README.md), unrelated to the Remote Execution API.
 - The snapshot contains newer prerelease versions of Gazelle, Python rules and protobuf. Put previews behind an explicit opt-in policy; do not silently equate a GitHub “latest” badge with a stable version.
 - Add a later supply-chain chapter covering package metadata, license information and SBOM generation after verifying the multi-module upstream release set. Registry and upstream version discovery need separate fields.
-- Windows SDK/MSVC and eBPF integration deserve platform-specific pages. Do not invent an official current module version or promote project-specific patches into generic recommendations.
+- Windows pages cover inspected MSVC/clang-cl discovery and process boundaries, with LLVM Windows provisioning discussed separately. No macOS or Windows SDK integration was executed. eBPF remains outside the published ruleset scope.
 
 ## Compatibility evidence
 

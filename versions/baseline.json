@@ -1,22 +1,30 @@
 {
-  "status": "foundations-published",
+  "status": "source-reference-published",
   "observed_at": "2026-11-05",
   "bazel": {
     "minimum_editorial_version": "9.3.1",
     "exact_reference_version": "9.3.1",
     "source_commit": "fee2bf2d1c14bc2096068a4d46f1842472092044",
     "release_url": "https://github.com/bazelbuild/bazel/releases/tag/9.3.1",
-    "coverage": "See docs/evidence.md; this is not a blanket compatibility claim."
+    "coverage": "Source-reviewed basics and runtime-tested foundational fixtures; see docs/evidence.md for per-claim boundaries."
   },
   "reapi": {
     "observed_latest_stable_tag": "v2.12.0",
     "commit": "9e084d0e43e717128ee72b5be584a7ba33e8006b",
     "release_url": "https://github.com/bazelbuild/remote-apis/releases/tag/v2.12.0",
-    "bazel_client_feature_coverage": "not yet audited",
-    "server_interoperability": "not tested"
+    "bazel_client_feature_coverage": "Selected source paths audited: declared range, capability checks, command/action construction, digests, properties, and outputs; not a complete feature audit.",
+    "server_interoperability": "not tested",
+    "bazel_client_declared_api_range": {
+      "low": "2.0",
+      "high": "2.11",
+      "source": "https://github.com/bazelbuild/bazel/blob/fee2bf2d1c14bc2096068a4d46f1842472092044/src/main/java/com/google/devtools/build/lib/remote/ApiVersion.java"
+    }
   },
   "rulesets": {
     "inventory": "rulesets/README.md",
-    "exact_baseline_integration_status": "not tested"
-  }
+    "exact_baseline_integration_status": "not tested",
+    "metadata": "versions/rulesets.json",
+    "source_review_status": "Exact exported APIs reviewed for covered releases; see family ledgers."
+  },
+  "follow_up_issue": "https://github.com/JSGette/bazel-for-agents/issues/1"
 }

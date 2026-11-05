@@ -13,7 +13,9 @@ Bazel semantics, command-line flags, ruleset APIs, version claims, and examples.
 - Resolve contradictions by examining the implementation and a focused probe.
   A versioned documentation URL is not sufficient by itself when it is stale.
 - Record observed stable releases separately from the project's tested selection.
-  Ruleset verification must include its transitive resolved module graph.
+  Ruleset integration verification must include its transitive resolved module
+  graph. Source review of an individual release establishes its exported API,
+  not that the release resolves unchanged or works with every other candidate.
 - Record REAPI identity separately from Bazel, and protocol support separately
   from actual client/server interoperability.
 
@@ -43,6 +45,20 @@ limitations: []
 `source-verified` means the cited source supports the assertion. `runtime-verified`
 means the named fixture also exercised it in the recorded environment. Neither
 status grants coverage beyond the claim's scope. A planned topic is not a claim.
+
+For page metadata, `bazel_verified` and `rulesets_verified` identify versions
+whose relevant sources or behavior were checked; `status` and the evidence record
+say which kind of check occurred. They are not compatibility declarations.
+Ruleset-only source reviews use `bazel_baseline: "9.3.1"` and an empty
+`bazel_verified` list when Bazel itself was not part of that review.
+`platforms_verified: []` means no platform execution is claimed.
+
+Source-only pages can publish definitions, API contracts, and task guidance with
+exact citations and explicit boundaries. Do not fill them with untested runnable
+recipes. Runtime verification remains necessary for copyable executable examples
+and actual integration claims. Existing executable fixtures keep their results;
+exhaustive claim-to-snippet coverage and remote CI are tracked in
+[issue #1](https://github.com/JSGette/bazel-for-agents/issues/1).
 
 ## Publication gate
 
@@ -80,4 +96,7 @@ The first automation should check evidence metadata, internal links, missing
 sources, snippet/fixture drift, and the exact-baseline fixture suite. Add a second
 lane for the newly selected stable Bazel release when it differs from the floor.
 Ruleset upgrades should update fixture locks and claim evidence in the same change.
-No recurring automation or remote workflow is installed by this draft.
+No recurring automation or remote workflow is installed. BuildBuddy, CI runners,
+claim-to-assertion coverage, and reporting are follow-up work in
+[issue #1](https://github.com/JSGette/bazel-for-agents/issues/1); they are not a
+prerequisite for publishing bounded source-reviewed fundamentals now.
