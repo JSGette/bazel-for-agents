@@ -1,0 +1,3 @@
+load(":probe.bzl", "set_probe")
+
+set_probe(name = "sets")

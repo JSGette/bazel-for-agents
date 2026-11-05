@@ -1,0 +1,4 @@
+module(name = "visibility_denied_load")
+
+bazel_dep(name = "visibility_example")
+local_path_override(module_name = "visibility_example", path = "..")

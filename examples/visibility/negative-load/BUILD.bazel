@@ -1,0 +1,3 @@
+load("@visibility_example//lib:restricted.bzl", "TARGET_NAME")
+
+filegroup(name = TARGET_NAME)

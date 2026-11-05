@@ -1,0 +1,25 @@
+load(":defs.bzl", "greeting", "greeting_report")
+
+greeting(
+    name = "greeting",
+    person = "Bazel",
+    runtime_data = "runtime.txt",
+    template = "message.tpl",
+)
+
+greeting_report(
+    name = "report",
+    source = ":greeting",
+)
+
+filegroup(
+    name = "plain_file",
+    srcs = ["runtime.txt"],
+)
+
+# Request this target explicitly to exercise the provider requirement failure.
+greeting_report(
+    name = "bad_provider",
+    source = ":plain_file",
+    tags = ["manual"],
+)

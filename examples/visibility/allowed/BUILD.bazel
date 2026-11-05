@@ -1,0 +1,6 @@
+load("//lib:restricted.bzl", "TARGET_NAME")
+
+filegroup(
+    name = TARGET_NAME,
+    srcs = ["//lib:shared"],
+)

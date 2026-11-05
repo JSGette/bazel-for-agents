@@ -1,0 +1,1 @@
+Runtime data is separate from the generated greeting.

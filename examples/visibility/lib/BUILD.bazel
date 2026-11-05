@@ -1,0 +1,8 @@
+filegroup(
+    name = "shared",
+    srcs = ["data.txt"],
+    visibility = ["//allowed:__pkg__"],
+)
+
+# Loading this file is governed separately by its visibility() declaration.
+exports_files(["restricted.bzl"], visibility = ["//visibility:public"])
